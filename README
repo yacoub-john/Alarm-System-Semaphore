@@ -1,4 +1,4 @@
-This C program is an builds the alarm_cond.c from "Programming with POSIX Threads" by David R. Butenhof, it introduces several improvements to manage alarms efficiently using POSIX threads. It extends the original alarm system by implementing multithreading techniques to handle alarms concurrently, enhancing system responsiveness and organization. Dedicated display threads manage alarm displays, while a monitoring thread efficiently handles alarm expiration, optimizing system performance.
+This C program builds the alarm_cond.c from "Programming with POSIX Threads" by David R. Butenhof, it introduces several improvements to manage alarms efficiently using POSIX threads. It extends the original alarm system by implementing multithreading techniques to handle alarms concurrently, enhancing system responsiveness and organization. Dedicated display threads manage alarm displays, while a monitoring thread efficiently handles alarm expiration, optimizing system performance.
 
 ## Usage
 
