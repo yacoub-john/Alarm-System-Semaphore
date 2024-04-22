@@ -1,0 +1,206 @@
+Scenario 1: 
+
+Alarm> Start_Alarm(1): Group(1) 10 Test_Message
+
+Alarm(1) Inserted by Main Thread 140170938833792 Into Alarm List at 1701653014: Group(1) 10 Test_Message
+
+Main Thread Created New Display Alarm Thread 140170930435648 For Alarm(1) at 1701653014: Group(1) 10 Test_Message
+
+Alarm> Alarm (1) Printed by Alarm Display Thread 140170930435648 at 1701653019: Group(1) 10 Test_Message
+
+Alarm Monitor Thread 140170938828352 Has Removed Alarm(1) at 1701653024: Group(1) 10 Test_Message
+
+Display Thread 140170930435648 Has Stopped Printing Message of Alarm(1) at 1701653025: Group(1) Test_Message
+No More Alarms in Group(1): Display Thread 140170930435648 exiting at 1701653025.
+
+Scenario 2: 
+Alarm>
+Start_Alarm(-1): Group(1) 50 Testing
+Alarm ID must be greater than or equal to 0 0
+
+Scenario 3: 
+Alarm>Start_Alarm(1): Group(1) 10 Test_Message
+
+Alarm(1) Inserted by Main Thread 139696601275264 Into Alarm List at 1701653762: Group(1) 10 Test_Message
+
+Main Thread Created New Display Alarm Thread 139696592877120 For Alarm(1) at 1701653762: Group(1) 10 Test_Message
+
+Alarm>Change_Alarm(1): Group(1) 10 Replaced_MessageAlarm (1) Printed by Alarm Display Thread 139696592877120 at 1701653767: Group(1) 10 Test_Message
+
+Change Alarm Request(1) Inserted by Main Thread 139696601275264 into Alarm List at 1701653768: Group(1) 10 Replaced_Message
+
+Alarm>Alarm Monitor Thread 139696601269824 Has Changed Alarm(1) at 1701653768: Group(1) 10 Replaced_Message
+
+Display Thread 139696592877120 Starts to Print Changed Message of Alarm(1) at 1701653772: Group(1) 10 Replaced_Message
+Alarm (1) Printed by Alarm Display Thread 139696592877120 at 1701653777: Group(1) 10 Replaced_Message
+
+Alarm Monitor Thread 139696601269824 Has Removed Alarm(1) at 1701653778: Group(1) 10 Replaced_Message
+
+Display Thread 139696592877120 Has Stopped Printing Message of Alarm(1) at 1701653782: Group(1) Replaced_Message
+
+No More Alarms in Group(1): Display Thread 139696592877120 exiting at 1701653782.
+
+Scenario 4: 
+Alarm>
+Start_Alarm(-1): Group(1) 50 Testing
+Alarm ID must be greater than or equal to 0 0
+
+Scenario 5: 
+Alarm>Start_Alarm(1): Group(1) 50 Testing
+
+Alarm(1) Inserted by Main Thread 139899185851264 Into Alarm List at 1701652819: Group(1) 50 Testing
+
+Main Thread Created New Display Alarm Thread 139899177453120 For Alarm(1) at 1701652819: Group(1) 50 Testing
+
+Alarm>Start_Alarm(1): Group(1) 50 Testing
+
+An alarm with ID 1 already exists
+
+Scenario 6: 
+Alarm> Start_Alarm(1): Group(1) 10 Testing
+
+Alarm(1) Inserted by Main Thread 139853826231168 Into Alarm List at 1701653602: Group(1) 10 Testing
+
+Main Thread Created New Display Alarm Thread 139853817833024 For Alarm(1) at 1701653602: Group(1) 10 Testing
+
+Alarm> Start_Alarm(2): Group(1) 10 Testing
+
+Alarm(2) Inserted by Main Thread 139853826231168 Into Alarm List at 1701653603: Group(1) 10 Testing
+
+Main Thread 139853826231168 Assigned to Display Alarm Thread 139853817833024 at 1701653603: Group(1) 10 Testing
+
+Alarm>
+Alarm (1) Printed by Alarm Display Thread 139853817833024 at 1701653607: Group(1) 10 Testing
+
+Alarm (2) Printed by Alarm Display Thread 139853817833024 at 1701653607: Group(1) 10 Testing
+
+Alarm Monitor Thread 139853826225728 Has Removed Alarm(1) at 1701653612: Group(1) 10 Testing
+
+Display Thread 139853817833024 Has Stopped Printing Message of Alarm(1) at 1701653612: Group(1) Testing
+
+Alarm (2) Printed by Alarm Display Thread 139853817833024 at 1701653612: Group(1) 10 Testing
+
+Alarm Monitor Thread 139853826225728 Has Removed Alarm(2) at 1701653613: Group(1) 10 Testing
+
+Display Thread 139853817833024 Has Stopped Printing Message of Alarm(2) at 1701653617: Group(1) Testing
+
+No More Alarms in Group(1): Display Thread 139853817833024 exiting at 1701653617.
+
+Scneario 7:
+
+Alarm>Start_Alarm(1): Group(1) 10 Testing
+
+Alarm(1) Inserted by Main Thread 140344571972480 Into Alarm List at 1701654431: Group(1) 10 Testing
+
+Main Thread Created New Display Alarm Thread 140344563574336 For Alarm(1) at 1701654431: Group(1) 10 Testing
+
+Alarm>Start_Alarm(1): Group(2) 10 Testing
+
+An alarm with ID 1 already exists.
+
+Scenario 8: 
+Alarm>Start_Alarm(1): Group(1) -1 Testing
+
+Alarm time must be greater than 0
+
+Scenario 9: 
+Start_Alarm(1): Group(1) 10 Testing
+
+Alarm(1) Inserted by Main Thread 139894879812480 Into Alarm List at 1701797641: Group(1) 10 Testing
+
+Main Thread Created New Display Alarm Thread 139894871414336 For Alarm(1) at 1701797641: Group(1) 10 Testing
+
+Alarm> Start_Alarm(2): Group(1) 10 Testing
+
+Alarm(2) Inserted by Main Thread 139894879812480 Into Alarm List at 1701797642: Group(1) 10 Testing
+
+Main Thread 139894879812480 Assigned to Display Alarm Thread 139894871414336 at 1701797642: Group(1) 10 Testing
+
+Alarm (1) Printed by Alarm Display Thread 139894871414336 at 1701797646: Group(1) 10 Testing
+
+Alarm (2) Printed by Alarm Display Thread 139894871414336 at 1701797646: Group(1) 10 Testing
+
+Alarm> Start_Alarm(3): Group(1) 10 Testing
+
+Alarm(3) Inserted by Main Thread 139894879812480 Into Alarm List at 1701797648: Group(1) 10 Testing
+
+Main Thread Created New Display Alarm Thread 139894863021632 For Alarm(3) at 1701797648: Group(1) 10 Testing
+
+Alarm Monitor Thread 139894879807040 Has Removed Alarm(1) at 1701797651: Group(1) 10 Testing
+
+Display Thread 139894871414336 Has Stopped Printing Message of Alarm(1) at 1701797651: Group(1) Testing
+
+Alarm (2) Printed by Alarm Display Thread 139894871414336 at 1701797651: Group(1) 10 Testing
+
+Alarm Monitor Thread 139894879807040 Has Removed Alarm(2) at 1701797652: Group(1) 10 Testing
+
+Alarm (3) Printed by Alarm Display Thread 139894863021632 at 1701797653: Group(1) 10 Testing
+
+Display Thread 139894871414336 Has Stopped Printing Message of Alarm(2) at 1701797656: Group(1) Testing
+
+No More Alarms in Group(1): Display Thread 139894871414336 exiting at 1701797656.
+
+Alarm Monitor Thread 139894879807040 Has Removed Alarm(3) at 1701797658: Group(1) 10 Testing
+
+Display Thread 139894863021632 Has Stopped Printing Message of Alarm(3) at 1701797658: Group(1) Testing
+
+No More Alarms in Group(1): Display Thread 139894863021632 exiting at 1701797658.
+
+Scenario 10: 
+
+Alarm> Change_Alarm(3): Group(1) 10 Testing
+
+Change Alarm Request(3) Inserted by Main Thread 139896472923008 into Alarm List at 1701816004: 
+
+Group(1) 10 Testing
+
+Alarm> Invalid Change Alarm Request(3) at 1701816004: Group(1) 10 Testing
+
+Scenario 11: 
+
+Alarm> Start_Alarm(3): Group(1) 10 Testing
+
+Alarm(3) Inserted by Main Thread 139884250270592 Into Alarm List at 1701818754: Group(1) 10 Testing
+
+Main Thread Created New Display Alarm Thread 139884241872448 For Alarm(3) at 1701818754: Group(1) 10 Testing
+
+Alarm (3) Printed by Alarm Display Thread 139884241872448 at 1701818759: Group(1) 10 Testing
+
+Alarm> Change_Alarm(3): Group(1) 10 new Alarm
+Alarm Monitor Thread 139884250265152 Has Removed Alarm(3) at 1701818764: Group(1) 10 Testing
+
+Change Alarm Request(3) Inserted by Main Thread 139884250270592 into Alarm List at 1701818764: Group(1) 10 new Alarm
+
+Invalid Change Alarm Request(3) at 1701818764: Group(1) 10 new Alarm
+
+Display Thread 139884241872448 Has Stopped Printing Message of Alarm(3) at 1701818764: Group(1) Testing
+
+No More Alarms in Group(1): Display Thread 139884241872448 exiting at 1701818764.
+
+Scenario 12: 
+
+Alarm> Start_Alarm(3): Group(1) 10 Message
+
+Alarm(3) Inserted by Main Thread 139735838620544 Into Alarm List at 1701820004: Group(1) 10 Message
+
+Main Thread Created New Display Alarm Thread 139735830222400 For Alarm(3) at 1701820004: Group(1) 10 Message
+
+Alarm>Change_Alarm(3): Group(2) 10 Message
+
+Change Alarm Request(3) Inserted by Main Thread 139735838620544 into Alarm List at 1701820007: Group(2) 10 Message
+
+Alarm>
+Alarm Monitor Thread 139735838615104 Has Changed Alarm(3) at 1701820007: Group(2) 10 Message
+
+Main Thread Created New Display Alarm Thread 139735754339904 For Alarm(3) at 1701820007: Group(2) 10 Message
+
+Display Thread 139735830222400 Has Stopped Printing Message of Alarm(3) at 1701820009: Changed Group(1) Message
+
+No More Alarms in Group(1): Display Thread 139735830222400 exiting at 1701820009.
+
+Display Thread 139735754339904 Has Taken Over Printing Message of Alarm(3) at 1701820012: Changed Group(2) 10 Message
+
+Alarm Monitor Thread 139735838615104 Has Removed Alarm(3) at 1701820017: Group(2) 10 Message
+Display Thread 139735754339904 Has Stopped Printing Message of Alarm(3) at 1701820017: Group(2) Message
+
+No More Alarms in Group(2): Display Thread 139735754339904 exiting at 1701820017.
